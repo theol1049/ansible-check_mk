@@ -41,7 +41,7 @@ Notice the use of the --skip-tags switch which is necessary as in this first run
 
 You now need to create an Automation user in our Check_MK site and use that information in the roles/omd/vars/main.yml file.
 
-Now we can deploy the check_mk_agent to our monitoring instance as well. Notice we are running just the check_mk_agent, discovery and pply steps now. Also after bootstrapping your system you can use your own user if you created one and uploaded the ssh keys. In this case you could use ansible with sudo (-u <username> -s instead of -u root).
+Now we can deploy the check_mk_agent to our monitoring instance as well. Notice we are running just the check_mk_agent, discovery and pply steps now. Also after bootstrapping your system you can use your own user if you created one and uploaded the ssh keys. In this case you could use ansible with sudo (-u *your_username* -s instead of -u root).
 
 > ansible-playbook -i cmkconfinv site.yml -l omd -u root --tags check_mk_agent,check_mk_discovery,check_mk_apply
 
